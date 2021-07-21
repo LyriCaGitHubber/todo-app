@@ -26,6 +26,8 @@ html {
 
 body {
   font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-medium);
+  color: var(--clr-primary);
   margin: 0;
 }
 
