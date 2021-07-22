@@ -4,6 +4,7 @@
 :root {
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Montserrat", sans-serif;
+  --fw-primary-small: 300;
   --fw-primary-medium: 400;
   --fw-primary-black: 900;
   --fw-secondary-semi-bold: 600;

@@ -8,9 +8,11 @@
 #task-btn {
   background-color: var(--clr-primary);
   width: 100%;
-  padding: 2em 0 2em 0;
+  padding: 1.5em 0 1.5em 0;
   color: white;
   border: none;
+  font-size: 1.6em;
+  font-weight: var(--fw-primary-small);
 }
 
 .inner-wrapper {
@@ -18,25 +20,59 @@
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  padding-left: 2.25em;
+  padding-left: 1.6em;
 }
 
-/*
 #enterTask::placeholder,
 #enterTask {
   color: var(--clr-content-passive);
   border: none;
   border-bottom: 1px solid black;
+  font-size: 47px;
+  border-color: var(--clr-content-passive);
 }
 
 input:focus {
   outline: 0;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: var(--clr-primary);
+}
+
+input[type="radio"]:not(:checked) + label {
+  color: var(--clr-text-secondary);
+}
+
+#task-form label,
+legend {
+  text-transform: uppercase;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  position: absolute;
+  width: 90%;
+  right: 0;
+  background-color: var(--clr-content-passive);
+  padding: 1em 0 1em 0;
+}
+
+.fieldset-wrapper label {
+  padding-left: 10px;
+}
+
 #task-form fieldset {
   margin: 3em 0 0 0;
   display: flex;
   border: none;
+  justify-content: space-around;
 }
 
-*/
+fieldset label {
+  font-size: 0.7rem;
+}
