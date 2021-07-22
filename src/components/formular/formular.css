@@ -1,0 +1,30 @@
+#task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#enterTask::placeholder,
+#enterTask {
+  font-size: 5.5rem;
+  color: var(--clr-content-passive);
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+input:focus {
+  outline: 0;
+}
+
+#task-form fieldset {
+  margin: 3em 0 0 0;
+  display: flex;
+  border: none;
+}
+
+#task-btn {
+  background-color: var(--clr-primary);
+  width: 80%;
+  align-self: center;
+  padding: 2em 0 2em 0;
+  color: white;
+}
