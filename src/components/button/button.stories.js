@@ -1,5 +1,5 @@
 import "./button.css";
-import buttonPlus from "./button.html";
+import buttonPlus from "./plus-button.html";
 
 export default {
   title: "Components/Button",
