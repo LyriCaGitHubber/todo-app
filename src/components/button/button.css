@@ -1,0 +1,9 @@
+.btn {
+  background-color: var(--clr-primary);
+  border-radius: 11px 0 0 0;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
