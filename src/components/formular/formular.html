@@ -1,0 +1,25 @@
+<form class="task-form">
+  <div class="inner-wrapper">
+    <label for="enterTask">Description</label>
+    <br />
+    <input id="enterTask" type="text" placeholder="Enter Task" />
+
+    <fieldset>
+      <legend>when</legend>
+      <div class="fieldset-wrapper">
+        <input type="radio" name="radio-btn" id="today" value="Today" />
+        <label for="today">Today</label>
+        <input type="radio" name="radio-btn" id="tomorrow" value="Tomorrow" />
+        <label for="tomorrow">Tomorrow</label>
+        <input
+          type="radio"
+          name="radio-btn"
+          id="selectDate"
+          value="Select Date"
+        />
+        <label for="selectDate">Select Date</label>
+      </div>
+    </fieldset>
+  </div>
+  <button class="task-btn" type="submit">Add Task</button>
+</form>
