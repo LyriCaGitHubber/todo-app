@@ -1,0 +1,38 @@
+.taskpage {
+  padding: 3em 0 0 2em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 47px;
+}
+
+.taskpage__header {
+  display: flex;
+  align-items: center;
+  padding: 0 1.9em 0 0;
+  justify-content: space-between;
+}
+
+.task-area {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.task-area__navigation {
+  display: flex;
+  transform: rotate(-90deg) translate(-100%, 0);
+  transform-origin: 0 0;
+  justify-content: space-around;
+}
+
+.task-area__navigation a {
+  color: black;
+  text-decoration: none;
+}
+
+.task-area__content {
+  padding-left: 20%;
+}
