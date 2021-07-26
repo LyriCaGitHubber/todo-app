@@ -1,9 +1,11 @@
 import "./task-list.css";
-import taskList from "./task-list.html";
+import checkedTaskItem from "./tasklist-item-checked.html";
+import uncheckedTaskItem from "./tasklist-item-unchecked.html";
 
 export default {
   title: "Components/Task-List",
   parameters: { layout: "fullscreen" },
 };
 
-export const taskItems = () => taskList;
+export const taskItemCheck = () => checkedTaskItem;
+export const taskItemUncheck = () => uncheckedTaskItem;

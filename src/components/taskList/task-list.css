@@ -3,7 +3,7 @@ ul {
 }
 
 input[type="checkbox"] {
-  display: none;
+  opacity: 0;
 }
 
 input[type="checkbox"]:checked + label {
