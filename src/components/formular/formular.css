@@ -1,11 +1,11 @@
-#task-form {
+.task-form {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-#task-btn {
+.task-btn {
   background-color: var(--clr-primary);
   width: 100%;
   padding: 1.5em 0 1.5em 0;
@@ -48,7 +48,7 @@ input[type="radio"]:not(:checked) + label {
   color: var(--clr-text-secondary);
 }
 
-#task-form label,
+.task-form label,
 legend {
   text-transform: uppercase;
 }
@@ -66,7 +66,7 @@ legend {
   padding-left: 10px;
 }
 
-#task-form fieldset {
+.task-form fieldset {
   margin: 3em 0 0 0;
   display: flex;
   border: none;
