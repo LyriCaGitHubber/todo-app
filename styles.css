@@ -9,3 +9,9 @@ body {
   padding: 0;
   height: 100vh;
 }
+
+.iconButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
