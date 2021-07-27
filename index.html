@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,19 +8,58 @@
     <title>Dashboard</title>
   </head>
   <body>
-    <div id="wrapper">
+    <main id="wrapper">
       <header class="dashboardHeader">
         <button aria-label="open menu" class="iconButton">
           <img src="assets/Cartot menu.svg" alt="Menu Button" />
         </button>
-        <h1>Tasks</h1>
-        <button aria-label="show notifications" class="iconButton">
-          <img
-            src="assets/notification-bell.svg"
-            alt="Dashboard notifications"
-          />
-        </button>
+        <div class="headerMenu">
+          <h1>Tasks</h1>
+          <button aria-label="show notifications" class="iconButton">
+            <img
+              src="assets/notification-bell.svg"
+              alt="Dashboard notifications"
+            />
+          </button>
+        </div>
       </header>
-    </div>
+      <section class="navigationArea">
+        <a href="#" class="taskNavLink">Today</a>
+        <a href="#" class="taskNavLink">Tomorrow</a>
+        <a href="#" class="taskNavLink">This Week</a>
+      </section>
+      <section class="taskList">
+        <label class="taskItem">
+          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
+            class="taskItem__labelText"
+            >Book appointment with Jared</span
+          >
+        </label>
+        <label class="taskItem">
+          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
+            class="taskItem__labelText"
+            >Walk the dog</span
+          >
+        </label>
+        <label class="taskItem">
+          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
+            class="taskItem__labelText"
+            >Eat lunch and walk</span
+          >
+        </label>
+        <label class="taskItem">
+          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
+            class="taskItem__labelText"
+            >Cook a delicious dinner for everyone</span
+          >
+        </label>
+        <label class="taskItem">
+          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
+            class="taskItem__labelText"
+            >Go to Heidepark with the Family on every weekend of the year</span
+          >
+        </label>
+      </section>
+    </main>
   </body>
 </html>
