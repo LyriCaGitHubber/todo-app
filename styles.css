@@ -91,6 +91,8 @@ body {
 
 input[type="checkbox"] {
   opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .taskItem__checkbox:checked + .taskItem__labelText {
@@ -103,4 +105,14 @@ input[type="checkbox"] {
   grid-row: span 2;
   align-items: center;
   justify-items: center;
+}
+
+.btn {
+  background-color: var(--clr-primary);
+  border-radius: 11px 0 0 0;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
