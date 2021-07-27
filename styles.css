@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Import global styles from global.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Montserrat", sans-serif;
+  --fw-primary-small: 300;
+  --fw-primary-medium: 400;
+  --fw-primary-black: 900;
+  --fw-secondary-semi-bold: 600;
+  --clr-primary: hsl(345, 99%, 64%);
+  --clr-secondary: hsl(245, 71%, 22%);
+  --clr-text-primary: hsl(0, 0%, 22%);
+  --clr-text-secondary: hsl(0, 0%, 7%);
+  --clr-content-passive: hsl(0, 0%, 83%);
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: var(--ff-primary);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-primary-medium);
+}
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 4fr 1fr;
+  height: 100%;
+}
+
+.iconButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.taskNavLink {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--clr-text-primary);
+  letter-spacing: 0.2em;
+}
+
+.taskNavLink--active {
+  color: var(--clr-primary);
+}
+
+.dashboardHeader {
+  grid-column: 1 / 3;
+}
+
+.headerMenu {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.taskList {
+  grid-column: 2/3;
+  grid-row: span 2;
+  overflow: auto;
+  padding-left: 1em;
+  padding-top: 4em;
+}
+
+.taskItem {
+  display: block;
+  margin-bottom: 2em;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.taskItem__checkbox:checked + .taskItem__labelText {
+  text-decoration: line-through 0.14em var(--clr-primary);
+}
+
+.navigationArea {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: span 2;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn {
+  background-color: var(--clr-primary);
+  border-radius: 11px 0 0 0;
+  border: none;
+  padding: 10px 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
