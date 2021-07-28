@@ -6,22 +6,22 @@ function sendAlert() {
 }
 
 const taskList = document.querySelector(".taskList");
+const newTask = { taskContent: "Javascript lernen", when: "", done: false };
 
-const taskOne = createTaskListItem();
+const taskOne = createTaskListItem(newTask);
 
 taskList.append(taskOne);
 
-function createTaskListItem() {
+function createTaskListItem(task) {
   const label = document.createElement("label");
   label.className = "taskItem";
   const input = document.createElement("input");
   input.className = "taskItem__checkbox";
   input.setAttribute("type", "checkbox");
+  input.checked = task.done;
   const span = document.createElement("span");
   span.className = "taskItem__labelText";
-  span.innerText = "New Task";
+  span.innerText = task.taskContent;
   label.append(input, span);
   return label;
 }
-
-console.log(createTaskListItem());
