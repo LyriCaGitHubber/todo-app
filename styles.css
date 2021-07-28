@@ -180,15 +180,15 @@ input:focus {
   outline: 0;
 }
 
-input[type="radio"] {
+.when_btn {
   display: none;
 }
 
-input[type="radio"]:checked + label {
+.when_btn:checked + label {
   color: var(--clr-primary);
 }
 
-input[type="radio"]:not(:checked) + label {
+.when_btn:not(:checked) + label {
   color: var(--clr-text-secondary);
 }
 
