@@ -1,3 +1,5 @@
+import { setLocalStorage } from "./util/localStorage.js";
+
 const form = document.querySelector(".task-form");
 form.onsubmit = function (event) {
   event.preventDefault();
@@ -9,5 +11,8 @@ form.onsubmit = function (event) {
   newTask.taskTitle = taskContent;
   newTask.date = dateInputChecked;
 
-  console.log(newTask);
+  setLocalStorage("Description", newTask.taskTitle);
+  setLocalStorage("When", newTask.date);
+
+  window.location.href = "/index.html";
 };

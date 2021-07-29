@@ -1,23 +1,10 @@
+import { getLocalStorage } from "./util/localStorage.js";
+
 const tasks = [
   {
-    title: "Javascript lernen",
+    title: getLocalStorage("Description", []),
     date: "tomorrow",
     isDone: false,
-  },
-  {
-    title: "HTML lernen",
-    date: "today",
-    isDone: false,
-  },
-  {
-    title: "CSS lernen",
-    date: "tomorrow",
-    isDone: true,
-  },
-  {
-    title: "CSS lernen",
-    date: "tomorrow",
-    isDone: true,
   },
 ];
 
@@ -29,6 +16,7 @@ const submit = document.querySelector(".btn");
 
 submit.onclick = () => {
   taskList.append(...taskItems);
+  window.location.href = "/new.html";
 };
 
 function createTaskListItem(task) {
