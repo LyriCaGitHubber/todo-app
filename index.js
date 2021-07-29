@@ -1,16 +1,35 @@
-const menuButton = document.querySelector(".iconButton");
-menuButton.onclick = sendAlert;
+const tasks = [
+  {
+    title: "Javascript lernen",
+    date: "tomorrow",
+    isDone: false,
+  },
+  {
+    title: "HTML lernen",
+    date: "today",
+    isDone: false,
+  },
+  {
+    title: "CSS lernen",
+    date: "tomorrow",
+    isDone: true,
+  },
+  {
+    title: "CSS lernen",
+    date: "tomorrow",
+    isDone: true,
+  },
+];
 
-function sendAlert() {
-  alert("Hello World!");
-}
+const taskItems = tasks.map((task) => createTaskListItem(task));
 
 const taskList = document.querySelector(".taskList");
-const newTask = { taskContent: "Javascript lernen", when: "", done: false };
 
-const taskOne = createTaskListItem(newTask);
+const submit = document.querySelector(".btn");
 
-taskList.append(taskOne);
+submit.onclick = () => {
+  taskList.append(...taskItems);
+};
 
 function createTaskListItem(task) {
   const label = document.createElement("label");
@@ -21,7 +40,7 @@ function createTaskListItem(task) {
   input.checked = task.done;
   const span = document.createElement("span");
   span.className = "taskItem__labelText";
-  span.innerText = task.taskContent;
+  span.innerText = task.title;
   label.append(input, span);
   return label;
 }
