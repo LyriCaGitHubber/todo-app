@@ -6,7 +6,6 @@ export function getLocalStorage(key, defaultValue) {
   }
 
   const data = JSON.parse(StorageItem);
-  console.log(data, data, data);
   return data;
 }
 

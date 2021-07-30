@@ -1,22 +1,22 @@
 import { getLocalStorage } from "./util/localStorage.js";
 
-const tasks = [
-  {
-    title: getLocalStorage("Description", []),
-    date: "tomorrow",
-    isDone: false,
-  },
-];
-
-const taskItems = tasks.map((task) => createTaskListItem(task));
+const Tasks = getLocalStorage("tasks", []);
+const taskItems = Tasks.map((task) => createTaskListItem(task));
 
 const taskList = document.querySelector(".taskList");
 
-const submit = document.querySelector(".btn");
+taskList.append(...taskItems);
+console.log(taskItems);
+const btnToday = document.querySelector("#today");
+const btnTomorrow = document.querySelector("#tomorrow");
+const btnSelectDate = document.querySelector("#selectDate");
 
-submit.onclick = () => {
-  taskList.append(...taskItems);
-  window.location.href = "/new.html";
+btnToday.onclick = () => {
+  taskList.innerHTML = "";
+  const todayFilter = taskItems.filter(
+    (item) => item.className == "taskItem.today"
+  );
+  console.log(todayFilter);
 };
 
 function createTaskListItem(task) {
@@ -28,7 +28,7 @@ function createTaskListItem(task) {
   input.checked = task.done;
   const span = document.createElement("span");
   span.className = "taskItem__labelText";
-  span.innerText = task.title;
+  span.innerText = task.taskTitle;
   label.append(input, span);
   return label;
 }
