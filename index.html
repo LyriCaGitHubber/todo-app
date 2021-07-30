@@ -24,46 +24,25 @@
         </div>
       </header>
       <section class="navigationArea">
-        <a href="#" class="taskNavLink">Today</a>
-        <a href="#" class="taskNavLink">Tomorrow</a>
-        <a href="#" class="taskNavLink">This Week</a>
+        <label class="taskNavLink" for="today">Today</label>
+        <input id="today" type="radio" name="dateFilter" value="today" />
+        <label class="taskNavLink" for="tomorrow">Tomorrow</label>
+        <input id="tomorrow" type="radio" name="dateFilter" value="tomorrow" />
+        <label class="taskNavLink" for="selectDate">Select Date</label>
+        <input
+          id="selectDate"
+          type="radio"
+          name="dateFilter"
+          value="selectDate"
+        />
       </section>
-      <section class="taskList">
-        <label class="taskItem">
-          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
-            class="taskItem__labelText"
-            >Book appointment with Jared</span
-          >
-        </label>
-        <label class="taskItem">
-          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
-            class="taskItem__labelText"
-            >Walk the dog</span
-          >
-        </label>
-        <label class="taskItem">
-          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
-            class="taskItem__labelText"
-            >Eat lunch and walk</span
-          >
-        </label>
-        <label class="taskItem">
-          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
-            class="taskItem__labelText"
-            >Cook a delicious dinner for everyone</span
-          >
-        </label>
-        <label class="taskItem">
-          <input class="taskItem__checkbox" type="checkbox" name="tasks" /><span
-            class="taskItem__labelText"
-            >Go to Heidepark with the Family on every weekend of the year</span
-          >
-        </label>
-      </section>
-      <button class="btn">
-        <img src="./assets/plusButton.svg" />
-      </button>
+      <section class="taskList"></section>
+      <a href="/new.html">
+        <button class="btn">
+          <img src="./assets/plusButton.svg" />
+        </button>
+      </a>
     </main>
-    <script src="./index.js" defer="true"></script>
+    <script type="module" src="./index.js" defer="true"></script>
   </body>
 </html>

@@ -1,36 +1,34 @@
-const tasks = [
-  {
-    title: "Javascript lernen",
-    date: "tomorrow",
-    isDone: false,
-  },
-  {
-    title: "HTML lernen",
-    date: "today",
-    isDone: false,
-  },
-  {
-    title: "CSS lernen",
-    date: "tomorrow",
-    isDone: true,
-  },
-  {
-    title: "CSS lernen",
-    date: "tomorrow",
-    isDone: true,
-  },
-];
+import { getLocalStorage } from "./util/localStorage.js";
 
-const taskItems = tasks.map((task) => createTaskListItem(task));
-
+const Tasks = getLocalStorage("tasks", []);
+console.log(Tasks);
+const taskItems = Tasks.map((task) => createTaskListItem(task));
 const taskList = document.querySelector(".taskList");
 
-const submit = document.querySelector(".btn");
+taskList.append(...taskItems);
 
-submit.onclick = () => {
-  taskList.append(...taskItems);
+//Date Buttons
+const btnToday = document.querySelector("#today");
+const btnTomorrow = document.querySelector("#tomorrow");
+const btnSelectDate = document.querySelector("#selectDate");
+
+btnToday.onclick = () => {
+  taskList.innerHTML = "";
+  const taskListToday = Tasks.filter((today) => today.date === "Today");
+  const todayItems = taskListToday.map((task) => createTaskListItem(task));
+  taskList.append(...todayItems);
 };
 
+btnTomorrow.onclick = () => {
+  taskList.innerHTML = "";
+  const tasksTomorrow = Tasks.filter(
+    (tomorrow) => tomorrow.date === "Tomorrow"
+  );
+  const tomorrowItems = tasksTomorrow.map((task) => createTaskListItem(task));
+  taskList.append(...tomorrowItems);
+};
+
+// Creates html dom for list items
 function createTaskListItem(task) {
   const label = document.createElement("label");
   label.className = "taskItem";
@@ -40,7 +38,7 @@ function createTaskListItem(task) {
   input.checked = task.done;
   const span = document.createElement("span");
   span.className = "taskItem__labelText";
-  span.innerText = task.title;
+  span.innerText = task.taskTitle;
   label.append(input, span);
   return label;
 }
